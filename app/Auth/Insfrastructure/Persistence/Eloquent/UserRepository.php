@@ -10,13 +10,9 @@ use App\Auth\Domain\ValueObjects\Email;
 class UserRepository implements UserRepositoryInterface
 {
 
-    public function findOrCreateUserByEmail(Email $email, string $name): User
+    public function createUser(Email $email, string $name): User
     {
-        // TODO: Implement findOrCreateUserByEmail() method.
-    }
 
-    public function findUserByEmail($email): User
-    {
-        // TODO: Implement findUserByEmail() method.
     }
+    public function findUserByEmail(Email $email): User;
 }

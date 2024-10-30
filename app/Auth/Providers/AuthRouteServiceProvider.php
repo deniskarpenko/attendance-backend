@@ -13,7 +13,7 @@ class AuthRouteServiceProvider extends RouteServiceProvider
         $this->routes(function () {
             Route::middleware(['auth:sanctum'])
                 ->prefix('auth')
-                ->group(base_path('Auth/Routes/auth.php'));
+                ->group(__DIR__ . '/../routes/auth.php');
         });
     }
 }
