@@ -7,6 +7,7 @@ use App\Auth\Domain\ValueObjects\Email;
 
 interface UserRepositoryInterface
 {
-    public function createUser(Email $email, string $name): User;
-    public function findUserByEmail(Email $email): User;
+    public function createUser(Email $email, string $name, string $password): User;
+
+    public function findUserByEmail(Email $email): ?User;
 }

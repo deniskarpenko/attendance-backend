@@ -9,10 +9,20 @@ use App\Auth\Domain\ValueObjects\Email;
 
 class UserRepository implements UserRepositoryInterface
 {
-
-    public function createUser(Email $email, string $name): User
+    public function createUser(Email $email, string $name, string $password): User
     {
+        $user = new User();
+        $user->email = (string) $email;
+        $user->name = $name;
+        $user->password = password_hash($password, PASSWORD_DEFAULT);
 
+        $user->save();
+
+        return $user;
     }
-    public function findUserByEmail(Email $email): User;
+
+    public function findUserByEmail(Email $email): ?User
+    {
+        return User::where('email', $email)->first();
+    }
 }
