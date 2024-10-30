@@ -11,7 +11,6 @@ class UserRepositoryTest extends TestCase
 {
     public function testCreateUser(): void
     {
-        $user = User::fac
         $userRepository = new UserRepository();
         //$user = $userRepository->createUser();
         $this->assertTrue(true);
