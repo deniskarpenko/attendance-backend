@@ -11,7 +11,7 @@ class AuthRouteServiceProvider extends RouteServiceProvider
     public function boot(): void
     {
         $this->routes(function () {
-            Route::middleware(['auth:sanctum'])
+            Route::middleware([])
                 ->prefix('auth')
                 ->group(__DIR__ . '/../routes/auth.php');
         });
