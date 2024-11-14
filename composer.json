@@ -10,6 +10,7 @@
         "laravel/horizon": "^5.9",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
+        "predis/predis": "^2.0",
         "spatie/laravel-data": "^4.11",
         "tymon/jwt-auth": "^2.1"
     },
