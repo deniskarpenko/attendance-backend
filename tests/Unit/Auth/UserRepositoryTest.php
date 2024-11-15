@@ -7,9 +7,12 @@ uses(\Illuminate\Foundation\Testing\WithFaker::class);
 
 uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
+uses(\Tests\TestCase::class);
+
 beforeEach(function () {
     $this->setUpFaker();
 });
+
 test('create user', function () {
     $email = new Email($this->faker->email());
 

@@ -13,7 +13,7 @@ class TokenRepository implements TokenRepositoryInterface
 
     public function store(Token $token): void
     {
-        Redis::set(self::USER_PREFIX . $token->userId, $token->token, 'EX', $token->expiry);
+        Redis::set(self::USER_PREFIX . $token->userId, $token->token, 'EX', $token->expiresAt);
     }
 
     public function getToken(int $userId): ?string
